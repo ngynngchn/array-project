@@ -16,6 +16,7 @@ const entryList = [];
 //*================= Functions =================
 
 addBtn.addEventListener("click", addItem);
+undoBtn.addEventListener("click", undoItem);
 
 function addItem() {
 	if (entry.value !== "") {
@@ -25,17 +26,23 @@ function addItem() {
 	}
 }
 
-// function addItem() {
-// 	if (entry.value !== "") {
-// 		entryList.push(`<li>${entry.value}</li>`);
-// 		output.innerHTML = entryList.join("");
-// 		entry.value = " ";
-// 	}
-// }
-
-undoBtn.addEventListener("click", undoItem);
-
 function undoItem() {
 	entryList.pop();
 	output.lastChild.remove();
 }
+
+/* other method inspired by Karin
+
+function addItem() {
+	if (entry.value !== "") {
+		entryList.push(`<li>${entry.value}</li>`);
+		output.innerHTML = entryList.join("");
+		entry.value = " ";
+	}
+}
+
+function undoItem() {
+	entryList.pop();
+	output.innerHTML = entryList.join("");
+} 
+*/
