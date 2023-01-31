@@ -75,9 +75,10 @@ button.undo {
 	background-color: rgb(232, 129, 129);
 }
 
-ul li {
+ol li {
 	background-color: white;
 	border-radius: 15px;
 	padding: 0.5rem 1rem;
 	margin: 0.5rem 0;
+	list-style-position: inside;
 }
